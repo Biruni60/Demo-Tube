@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="max-w-screen-xl m-auto">
+        <div class="p-10 ">
+           <div  class="p-4  bg-slate-100 mb-4 ">
+            <h2 class="text-4xl font-semibold">1.Scope of var, let, and const</h2>
+           <div class="p-2 my-2">
+            <h2 class="text-2xl font-medium">i.Scope of var</h2>
+            <p class="p-2"><span class="text-lg font-medium">Scope:</span> var variables are function-scoped. This means they are accessible within the function in which they are declared, as well as within any nested functions.</p>
+            <h2 class="text-2xl font-medium">ii.Scope of Let</h2>
+            <p class="p-2"><span class="text-lg font-medium">Scope:</span> let variables are block-scoped. This means they are confined to the block in which they are defined, such as a loop or an if statement. They are not accessible outside that block.</p>
+            <h2 class="text-2xl font-medium">iii.scope of const</h2>
+            <p class="p-2"><span class="text-lg font-medium">Scope:</span>  const variables are also block-scoped, just like let. They are confined to the block in which they are defined and are not accessible outside that block.</p>
+           </div>
+           </div>
+        <div class="p-4  bg-slate-100 mb-4 ">
+           <h2  class="text-4xl font-semibold"> 2.Use cases of null and undefined</h2>
+           <div  class="p-2 my-3">
+            <h2  class="text-2xl font-medium">Use of undefined</h2>
+            <ul class="p-2 my-2">
+                <li><span class="text-lg font-medium">i.Default variable initialization:</span> If you want to declare a variable and indicate that it doesn't yet have a value, JavaScript initializes it with undefined.</li>
+                <li><span class="text-lg font-medium">ii.Function parameters:</span> If a function parameter is not provided with an argument when the function is called, it takes the value undefined.</li>
+                <li><span class="text-lg font-medium">iii.Implicit return:</span> If a function doesn't explicitly return a value, it returns undefined by default.</li>
+            </ul>
+            <h2 class="text-2xl font-medium">Use of null </h2>
+            <ul class="p-2 my-2">
+                <li><span class="text-lg font-medium">i.Explicitly signaling absence of value:</span> If you want to indicate that a variable has no value or that an object property deliberately points to nothing, you can assign null.</li>
+                <li> <span class="text-lg font-medium">ii.Resetting references: </span>When you want to clear a reference to an object to release memory, you might set the reference to null.</li>
+            </ul>
+           </div>
+           
+
+        </div>
+        <div class="p-4  bg-slate-100 mb-4 ">
+            <h2  class="text-4xl font-semibold my-2">3.REST API</h2>
+            <p class="p-2">A REST (Representational State Transfer) API is a common architectural style for designing networked applications, particularly web services. It is based on a set of principles that guide the design of APIs to ensure they are scalable, maintainable, and interoperable. REST APIs are widely used in web development for building client-server interactions, allowing clients (such as web browsers or mobile apps) to communicate with server-side resources.</p>
+           </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

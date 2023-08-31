@@ -1,0 +1,1 @@
+const showBlog =()=>window.location.href=('blog.html');
