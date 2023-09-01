@@ -57,7 +57,7 @@ const  buttonClicked = async(category_id) => {
      <h2 class="card-title">${catagory.title}</h2>
      </div>
        <div class="">
-       <p>${catagory.authors[0].profile_name} <span>   <i class="fa-solid fa-circle-check"></i></span></p>
+       <p>${catagory.authors[0].profile_name} ${catagory.authors[0].verified?" <span><i class=' fa-solid fa-circle-check'></i> </span>": "" }
  
        <p>${catagory.others.views} Views</p>
        </div>
@@ -78,18 +78,23 @@ const  buttonClicked = async(category_id) => {
         addCard.classList=`grid gap-4 md:grid-cols-2 lg:grid-cols-4 `
     cardDetail.forEach(catagory => {
         const div = document.createElement("div");
-        
+        const hr =Math.floor(parseInt(catagory.others.posted_date)/3600);
+        const min=Math.floor((parseInt(catagory.others.posted_date)%3600)/60);
+        console.log(hr,min);
       
         div.classList = `card  bg-base-100 shadow-xl p-4 `;
       
         div.innerHTML=`
         <figure><img class="h-[300px]" src=${catagory.thumbnail} alt="Shoes" /></figure>
+        <p class="text-end -mt-10 text-white"> ${catagory.others.posted_date? `${hr} hr ${min} min ago`   : ''}
+      </p>
+      
      <div class="card-body">
-     <div class="flex gap-2 "> <img class="w-10 h-10 rounded-full " src=${catagory.authors[0].profile_picture} alt="">
+     <div class="flex gap-2 mt-6 "> <img class="w-10 h-10 rounded-full " src=${catagory.authors[0].profile_picture} alt="">
      <h2 class="card-title">${catagory.title}</h2>
      </div>
-       <div class="">
-       <p>${catagory.authors[0].profile_name} ${ }
+       <div class="text-sm text-slate-500">
+       <p  >${catagory.authors[0].profile_name} ${catagory.authors[0].verified? " <span><i class=' fa-solid fa-circle-check'></i> </span>": "" }
        
        <p>${catagory.others.views} Views</p>
        </div>
